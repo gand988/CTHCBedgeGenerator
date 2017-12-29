@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Standard meta tags -->
+    <meta name="keywords" content=""> 					<!-- key for web search-->
+    <title>CTHC CustomImage</title>
+    <meta name="description" content="">				<!-- description of the website -->
+    <meta name="author" content="Matteo Zanda">	<!-- author of the website -->
+    <!--
+      * This site was build by Matteo Zanda - (tba website)
+    -->
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FavIcon-->
+    <!-- <link rel="shortcut icon" href="img/fav.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav.png"> -->
+  </head>
+  <body>
+    <h1>Character selection for <a href="#">#CTHC</a></h1>
+    <p>- select your 3 character from the challenge</p>
+    <div class="charSelect">
+      <input type="checkbox" name="character" value="0" id="crono" class="CTchara">
+        <label for="crono"></label>
+      <input type="checkbox" name="character" value="1" id="marle" class="CTchara">
+        <label for="marle"></label>
+      <input type="checkbox" name="character" value="2" id="lucca" class="CTchara">
+        <label for="lucca"></label>
+      <input type="checkbox" name="character" value="3" id="frog"  class="CTchara">
+        <label for="frog"></label>
+      <input type="checkbox" name="character" value="4" id="robo"  class="CTchara">
+        <label for="robo"></label>
+      <input type="checkbox" name="character" value="5" id="ayla"  class="CTchara">
+        <label for="ayla"></label>
+      <input type="checkbox" name="character" value="6" id="magus" class="CTchara">
+        <label for="magus"></label>
+    </div>
+    <button type="button" name="button" onclick="drawingSelected()">Generate</button>
+    <button id="resetCanvas">Reset</button>
+    <div class="">
+      <h1>Your character </h1>
+      <canvas width='444' height='125' id="myCanvas"></canvas>
+    </div>
+
+
+    <script src="js/script.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
+
+  </body>
+</html>

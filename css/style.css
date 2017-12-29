@@ -1,0 +1,74 @@
+/*
+height: 125px;
+width: 148px;
+*/
+html,
+body{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+input[type=checkbox] {
+  display:none;
+}
+
+input[type=checkbox] + label{
+  width: 148px;
+  height: 125px;
+  display:inline-block;
+  padding: 0 0 0 0px;
+  border: 1px solid transparent;
+  opacity: 0.5;
+}
+input[type=checkbox]:checked + label
+{
+  border: 1px solid #1FFFFF;
+  height: 125px;
+  width: 148px;
+  display:inline-block;
+  padding: 0 0 0 0px;
+  opacity: 1;
+}
+
+input#crono[type=checkbox] + label{
+  background: url("../img/crono.png") no-repeat;
+}
+input#marle[type=checkbox] + label{
+  background: url("../img/marle.png") no-repeat;
+}
+input#lucca[type=checkbox] + label{
+  background: url("../img/lucca.png") no-repeat;
+}
+input#frog[type=checkbox] + label{
+  background: url("../img/frog.png") no-repeat;
+}
+input#robo[type=checkbox] + label{
+  background: url("../img/robo.png") no-repeat;
+}
+input#ayla[type=checkbox] + label{
+  background: url("../img/ayla.png") no-repeat;
+}
+input#magus[type=checkbox] + label{
+  background: url("../img/magus.png") no-repeat;
+}
+
+.charSelect{
+  padding: 5px;
+  background-color: #333;
+}
+button,
+#download{
+   border-top: 1px solid #0099ff;
+   background: #0099ff;
+   padding: 10px 20px;
+   color: white;
+   font-size: 15px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#myCanvas{
+  /* width: 148px;
+  height: 125px; */
+  background-color: #333;
+}
