@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100707453-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-100707453-3');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Standard meta tags -->
     <meta name="keywords" content=""> 					<!-- key for web search-->
-    <title>CTHC CustomImage</title>
-    <meta name="description" content="">				<!-- description of the website -->
+    <title>CTHC Bedge generator</title>
+    <meta name="description" content="Bedge generator for the Chrono Trigger Holiday Challenge">				<!-- description of the website -->
     <meta name="author" content="Matteo Zanda">	<!-- author of the website -->
     <!--
-      * This site was build by Matteo Zanda - (tba website)
+      * This site was build by Matteo Zanda - https://gand988.github.io/portfolio/
     -->
 
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
     <!-- FavIcon-->
-    <!-- <link rel="shortcut icon" href="img/fav.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/fav.png"> -->
+    <link rel="shortcut icon" href="img/fav.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav.png">
   </head>
   <body>
-    <h1>Character selection for <a href="#">#CTHC</a></h1>
-    <p>- select your 3 character from the challenge</p>
-    <div class="charSelect">
-      <input type="checkbox" name="character" value="0" id="crono" class="CTchara">
-        <label for="crono"></label>
-      <input type="checkbox" name="character" value="1" id="marle" class="CTchara">
-        <label for="marle"></label>
-      <input type="checkbox" name="character" value="2" id="lucca" class="CTchara">
-        <label for="lucca"></label>
-      <input type="checkbox" name="character" value="3" id="frog"  class="CTchara">
-        <label for="frog"></label>
-      <input type="checkbox" name="character" value="4" id="robo"  class="CTchara">
-        <label for="robo"></label>
-      <input type="checkbox" name="character" value="5" id="ayla"  class="CTchara">
-        <label for="ayla"></label>
-      <input type="checkbox" name="character" value="6" id="magus" class="CTchara">
-        <label for="magus"></label>
-    </div>
-    <button type="button" name="button" onclick="drawingSelected()">Generate</button>
-    <button id="resetCanvas">Reset</button>
+
+    <header>
+      <h1>Badge Creator for <a href="http://fourjobfiesta.com/cthc/">#CTHC</a></h1>
+      <p> - Select 3 character</p>
+      <p> - Press Generate to create the bedge</p>
+    </header>
+
+    <section class="content center">
+      <div class="charSelect ">
+        <input type="checkbox" name="character" value="0" id="crono" class="CTchara">
+          <label for="crono"></label>
+        <input type="checkbox" name="character" value="1" id="marle" class="CTchara">
+          <label for="marle"></label>
+        <input type="checkbox" name="character" value="2" id="lucca" class="CTchara">
+          <label for="lucca"></label>
+        <input type="checkbox" name="character" value="3" id="frog"  class="CTchara">
+          <label for="frog"></label>
+        <input type="checkbox" name="character" value="4" id="robo"  class="CTchara">
+          <label for="robo"></label>
+        <input type="checkbox" name="character" value="5" id="ayla"  class="CTchara">
+          <label for="ayla"></label>
+        <input type="checkbox" name="character" value="6" id="magus" class="CTchara">
+          <label for="magus"></label>
+      </div>
+
+      <a type="button" name="button" onclick="drawingSelected()" id="generate" class="button-Style">Generate</a>
+      <a onclick="uncheckBox()" id="reset" class="button-Style">Reset</a>
+    </section>
+
+
     <div class="">
       <h1>Your character </h1>
-      <canvas width='444' height='125' id="myCanvas"></canvas>
+      <canvas width='444' height='125' id="myCanvas"></canvas><br>
+      <a id="saveImage" class="button-Style">Save Image...</a>
     </div>
 
-
+    <p class="credit">created by <a href="https://gand988.github.io/portfolio/">Matteo Zanda</a></p>
     <script src="js/script.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
 

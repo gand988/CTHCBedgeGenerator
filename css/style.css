@@ -1,13 +1,29 @@
-/*
-height: 125px;
-width: 148px;
-*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html,
 body{
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  background-color: #F5F5F5;
+  margin: 0;
   padding: 0;
   text-align: center;
+}
+
+.center{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.charSelect{
+  background: url('../img/background-grey.png');
+  margin: 10px;
+  padding: 10px;
 }
 input[type=checkbox] {
   display:none;
@@ -55,20 +71,31 @@ input#magus[type=checkbox] + label{
 
 .charSelect{
   padding: 5px;
-  background-color: #333;
+  /* background-color: #333; */
 }
-button,
-#download{
-   border-top: 1px solid #0099ff;
-   background: #0099ff;
-   padding: 10px 20px;
-   color: white;
-   font-size: 15px;
-   text-decoration: none;
-   vertical-align: middle;
-   }
+.button-Style{
+  display: inline-block;
+  border-top: 1px solid #0099ff;
+  background: #0099ff;
+  padding: 10px 20px;
+  width: 100px;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+#saveImage{
+  width: 160px;
+}
+
 #myCanvas{
+  border: 1px solid black;
   /* width: 148px;
   height: 125px; */
-  background-color: #333;
+  /* background-color: #333; */
+}
+
+.credit{
+  margin-top: 90px;
+  padding: 0;
 }
