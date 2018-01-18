@@ -1,73 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100707453-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-100707453-3');
-    </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Standard meta tags -->
-    <meta name="keywords" content=""> 					<!-- key for web search-->
-    <title>CTHC Bedge generator</title>
-    <meta name="description" content="Bedge generator for the Chrono Trigger Holiday Challenge">				<!-- description of the website -->
-    <meta name="author" content="Matteo Zanda">	<!-- author of the website -->
-    <!--
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100707453-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-100707453-3');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Standard meta tags -->
+  <meta name="keywords" content="">
+  <!-- key for web search-->
+  <title>#CTHC Badge generator</title>
+  <meta name="description" content="Badge generator for the Chrono Trigger Holiday Challenge">
+  <!-- description of the website -->
+  <meta name="author" content="Matteo Zanda">
+  <!-- author of the website -->
+  <!--
+      * Version: 2.0
+          * new design to match the ingame menu
+          * three badge of choise
+              character sprite + thumb
+              only thumb
+              only character sprite
+
       * This site was build by Matteo Zanda - https://gand988.github.io/portfolio/
     -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
-    <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- FavIcon-->
-    <link rel="shortcut icon" href="img/fav.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/fav.png">
-  </head>
-  <body>
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FavIcon-->
+  <link rel="shortcut icon" href="img/fav.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/fav.png">
 
+  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+</head>
+
+<body>
+  <section class="page-wrap">
+    <a href="https://github.com/gand988/CTHCBedgeGenerator" class="github" alt="github">
+      <<span>GitHub</span>
+    </a>
     <header>
-      <h1>Badge Creator for <a href="http://fourjobfiesta.com/cthc/">#CTHC</a></h1>
+      <h1>Badge Generator for</h1>
+      <h2><a href="http://fourjobfiesta.com/cthc/">#Chrono Trigger Holiday Challenge</a></h2>
       <p> - Select 3 character</p>
-      <p> - Press Generate to create the bedge</p>
+      <p> - Press Generate to create the badge</p>
+      <p> - press
+        <img src="img/down.png" width="20" alt="download"> to download your favorite</p>
     </header>
-
+    <!-- 
+  crono 
+  marle 
+  lucca
+  frog
+  robo
+  ayla
+  magus
+ -->
     <section class="content center">
-      <div class="charSelect ">
-        <input type="checkbox" name="character" value="0" id="crono" class="CTchara">
-          <label for="crono"></label>
-        <input type="checkbox" name="character" value="1" id="marle" class="CTchara">
-          <label for="marle"></label>
-        <input type="checkbox" name="character" value="2" id="lucca" class="CTchara">
-          <label for="lucca"></label>
-        <input type="checkbox" name="character" value="3" id="frog"  class="CTchara">
-          <label for="frog"></label>
-        <input type="checkbox" name="character" value="4" id="robo"  class="CTchara">
-          <label for="robo"></label>
-        <input type="checkbox" name="character" value="5" id="ayla"  class="CTchara">
-          <label for="ayla"></label>
-        <input type="checkbox" name="character" value="6" id="magus" class="CTchara">
-          <label for="magus"></label>
+      <div class="char__selection column">
+        <h1 class="title_text">Character</h1>
+        <div class="char__container">
+          <input type="checkbox" name="character" value="0" id="crono" class="CTchara">
+          <label for="crono">
+            <div class="first">
+              <div class="second">
+                <span class="text">Crono</span>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="char__container">
+          <input type="checkbox" name="character" value="1" id="marle" class="CTchara">
+          <label for="marle">
+            <div class="first">
+              <div class="second">
+                <span class="text">Marle</span>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="char__container">
+          <input type="checkbox" name="character" value="2" id="lucca" class="CTchara">
+          <label for="lucca">
+            <div class="first">
+              <div class="second">
+                <span class="text">Lucca</span>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="char__container">
+          <input type="checkbox" name="character" value="3" id="frog" class="CTchara">
+          <label for="frog">
+            <div class="first">
+              <div class="second">
+                <span class="text">Frog</span>
+              </div>
+            </div>
+          </label>
+        </div>
+        <span class="char__container">
+          <input type="checkbox" name="character" value="4" id="robo" class="CTchara">
+          <label for="robo">
+            <div class="first">
+              <div class="second">
+                <span class="text">Robo</span>
+              </div>
+            </div>
+          </label>
+        </span>
+        <span class="char__container">
+          <input type="checkbox" name="character" value="5" id="ayla" class="CTchara">
+          <label for="ayla">
+            <div class="first">
+              <div class="second">
+                <span class="text">Ayla</span>
+              </div>
+            </div>
+          </label>
+        </span>
+        <span class="char__container">
+          <input type="checkbox" name="character" value="6" id="magus" class="CTchara">
+          <label for="magus">
+            <div class="first">
+              <div class="second">
+                <span class="text">Magus</span>
+              </div>
+            </div>
+          </label>
+        </span>
+        <!-- container generate and reset button -->
+
+        <div class="G_R">
+          <div class="gen">
+            <a onclick="drawingSelected()" id="generate" class="button-Style">
+              <div class="first">
+                <div class="second">
+                  <span class="text">Generate</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="res">
+            <a onclick="uncheckBox()" id="reset" class="button-Style">
+            <div class="first">
+              <div class="second">
+                <span class="text">Reset</span>
+              </div>
+            </div>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <a type="button" name="button" onclick="drawingSelected()" id="generate" class="button-Style">Generate</a>
-      <a onclick="uncheckBox()" id="reset" class="button-Style">Reset</a>
+      <!-- second column -->
+      <div class="canvas-column column">
+        <h1 class="title_text">Your character</h1>
+        <div class="canvas_container">
+          <canvas width='444' height='125' id="myCanvas"></canvas>
+          <a id="saveImage">
+            <img src="img/down.png" class="download" alt="">
+          </a>
+        </div>
+        <br>
+        <div class="canvas_container">
+          <canvas width='340' height='120' id="myCanvas2"></canvas>
+          <a id="saveImage2">
+            <img src="img/down.png" class="download" alt="">
+          </a>
+        </div>
+        <br>
+        <div class="canvas_container">
+          <canvas width='150' height='58' id="myCanvas3"></canvas>
+          <a id="saveImage3">
+            <img src="img/down.png" class="download" alt="">
+          </a>
+        </div>
+        <br>
+        <!-- <a id="saveImage" class="button-Style">Save Image...</a> -->
+      </div>
+      <div class="btn-column column footer">
+        <span class="title_text credit">Created by
+          <a href="https://gand988.github.io/portfolio/">Matteo Zanda</a> for
+          <a href="http://fourjobfiesta.com/cthc/">#CTHC</a>
+        </span>
+      </div>
     </section>
+  </section>
+  <script src="js/script.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
 
+</body>
 
-    <div class="">
-      <h1>Your character </h1>
-      <canvas width='444' height='125' id="myCanvas"></canvas><br>
-      <a id="saveImage" class="button-Style">Save Image...</a>
-    </div>
-
-    <p class="credit">Check the project on my <a href="https://github.com/gand988/CTHCBedgeGenerator">Github</a></p>
-    <script src="js/script.js" charset="utf-8"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
-
-  </body>
 </html>
