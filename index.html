@@ -14,14 +14,17 @@
   <meta name="author" content="Matteo Zanda">
   <!-- author of the website -->
   <!--
-      * Version: 2.0
+      * Current: 
+        * Version: 2.5
+        - Improved JS code, and get removed jQuery
+      * Old
+        * Version: 2.0
           * new design to match the ingame menu
           * three badge of choise
               character sprite + thumb
               only thumb
               only character sprite
-
-      * This site was build by Matteo Zanda - https://gand988.github.io/portfolio/
+      * Build by Matteo 'Gand988' Zanda - https://gand988.github.io/portfolio/
     -->
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
@@ -126,7 +129,7 @@
           </label>
         </span>
         <span class="char__container">
-          <input type="checkbox" name="character" value="5" id="ayla" class="CTchara">
+          <input type="checkbox" name="character" value="5" id="ayla" class="CTchara" >
           <label for="ayla">
             <div class="first">
               <div class="second">
@@ -145,11 +148,11 @@
             </div>
           </label>
         </span>
-        <!-- container generate and reset button -->
 
+        <!-- container generate and reset buttons -->
         <div class="G_R">
           <div class="gen">
-            <a onclick="drawingSelected()" id="generate" class="button-Style">
+            <a id="generate" class="button-Style">
               <div class="first">
                 <div class="second">
                   <span class="text">Generate</span>
@@ -158,7 +161,7 @@
             </a>
           </div>
           <div class="res">
-            <a onclick="uncheckBox()" id="reset" class="button-Style">
+            <a id="reset" class="button-Style">
             <div class="first">
               <div class="second">
                 <span class="text">Reset</span>
@@ -203,9 +206,10 @@
       </div>
     </section>
   </section>
+
   <script src="js/script.js" charset="utf-8"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100707453-3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
